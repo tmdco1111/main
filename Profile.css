@@ -1,0 +1,176 @@
+:root {
+  --main-background-color: rgb(204, 193, 44);
+  --main-color: rgb(143, 57, 201);
+  --content-color: rgb(37, 255, 248);
+}
+
+html, body {
+  background-color: var(--main-background-color);
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icn{
+  width:150px;
+  height:150px;
+  border-radius:75px;
+  margin-top: -20px;
+  border: 2px solid var(--content-color);
+  transition: transform 200ms;
+}
+
+.icn:hover{
+  transform: scale(1.1);
+}
+
+.text-list {
+  position: absolute;
+  bottom: 10px;
+  margin: 20px;
+  height: 100px;
+  overflow: auto;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 670px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 10px;
+  Width: 480px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--content-color);
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  Width: 470px;
+  height: 590px;
+  border-radius: 10px;
+  background-color: white;
+  border: 5px solid var(--content-color);
+  background-image: url("p.png");
+  background-size : cover ;
+  background-repeat: no-repeat;
+  background-position: 0% -295px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article .button-style {
+  width: 90px;
+  height: 30px;
+  border: 0px;
+  color: white;
+  font-size: 20px;
+  background-color: var(--content-color);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 160px;
+  transition: transform 200ms;
+}
+
+.button-style:active{
+  transform: scale(1.1);
+}
+
+.name-container{
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 190px;
+}
+
+footer{
+  position: relative;
+  top: 30px;
+  Width: 580px;
+  height: 220px;
+  border-radius: 10px;
+  background-color: var(--content-color);
+}
+
+label{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: inline;
+  left: 440px;
+}
+.hamberger-container{
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: var(--haberger-bg);
+}
+
+.hamberger,
+.hamberger::before,
+.hamberger::after {
+  position: absolute;
+  width: 25px;
+  height: 2.5px;
+  transition: 0.5s;
+  background: white;
+}
+
+.hamberger::before,
+.hamberger::after {
+  content: "";
+}
+
+.hamberger{
+  top: 50%;
+}
+
+.hamberger::before{
+  top: -9px;
+}
+
+.hamberger::after{
+  top: 9px;
+}
+
+.toggle:checked ~ .hamberger::after{
+  top: 0;
+  transform: rotate(225deg);
+}
+.toggle:checked ~ .hamberger::before{
+  top: 0;
+  transform: rotate(135deg);
+}
+.toggle:checked ~ .hamberger{
+  background: var(--haberger-bg);
+}
+.toggle{
+  opacity: 0;
+}
